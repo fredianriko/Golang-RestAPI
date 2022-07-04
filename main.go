@@ -59,8 +59,9 @@ func getTodoById(context *gin.Context){
 
 
 
-	//loop over todos
+	//loop over todos, equals to forEach in javascript
 	for _, item := range todos {
+		//when meet the id, return the todos
 		if item.ID == id {
 			context.IndentedJSON(http.StatusOK, item)
 			return
